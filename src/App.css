@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; background: #0f172a; color: #e2e8f0; }
+.app { max-width: 1100px; margin: 0 auto; padding: 24px; }
+h1 { margin: 0; }
+h2 { margin: 0 0 12px; font-size: 18px; }
+.sub { color: #94a3b8; margin: 4px 0 24px; }
+.layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 800px) { .layout { grid-template-columns: 1fr; } }
+.card { background: #1e293b; border-radius: 14px; padding: 20px; }
+.video { width: 100%; aspect-ratio: 4 / 3; background: #000; border-radius: 10px; overflow: hidden;
+         display: flex; align-items: center; justify-content: center; position: relative; }
+.video .cam { width: 100%; height: 100%; }
+.video canvas { width: 100%; height: 100%; object-fit: cover; }
+.video .preview { width: 100%; height: 100%; object-fit: contain; }
+.placeholder, .muted { color: #64748b; }
+.buttons { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0; }
+button { background: #3b82f6; color: #fff; border: 0; padding: 10px 16px; border-radius: 8px;
+         cursor: pointer; font-size: 14px; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.danger { background: #ef4444; }
+button.secondary { background: #475569; }
+button.rec { background: #f59e0b; }
+.error { color: #fca5a5; }
+.result { display: flex; align-items: center; justify-content: space-between; background: #0f172a;
+          border-radius: 10px; padding: 14px 16px; min-height: 52px; }
+.gesture { font-size: 22px; font-weight: 700; color: #4ade80; }
+.conf { color: #94a3b8; }
+.bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.bar-label { width: 110px; font-size: 14px; }
+.bar { flex: 1; height: 10px; background: #0f172a; border-radius: 6px; overflow: hidden; }
+.fill { height: 100%; background: #3b82f6; transition: width .1s; }
+.bar-val { width: 40px; text-align: right; font-size: 13px; color: #94a3b8; }
+.table-wrap { max-height: 220px; overflow: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #334155; }
